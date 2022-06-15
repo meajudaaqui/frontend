@@ -2,9 +2,11 @@ import React from 'react'
 import logo from './logo.svg';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
-import Blogs from "./pages/Blogs";
+import Login from "./pages/Login";
+import CreateUser from "./pages/CreateUser";
 
 function App() {
   const [clicks, setClicks] = React.useState(0);
@@ -13,7 +15,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="blogs" element={<Blogs />}/>
+          <Route path="login" element={<Login />}/>
+          <Route path="create-user" element={<CreateUser />}/>
         </Route>
       </Routes>
     </BrowserRouter>

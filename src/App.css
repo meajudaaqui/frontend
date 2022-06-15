@@ -24,9 +24,15 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-nav .nav-item:not(:last-child){
+  border-right: 1px solid black;
 }
+
+.navbar-nav .nav-item .a {
+  color: #000;
+}
+
+
 
 @keyframes App-logo-spin {
   from {
