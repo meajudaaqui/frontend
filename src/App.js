@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -7,9 +7,10 @@ import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import CreateUser from "./pages/CreateUser";
+import Teste from "./pages/Teste";
+import { PrivateRoute } from './_components';
 
 function App() {
-  const [clicks, setClicks] = React.useState(0);
   return (
     <BrowserRouter>
       <Routes>
@@ -18,6 +19,7 @@ function App() {
           <Route path="login" element={<Login />}/>
           <Route path="create-user" element={<CreateUser />}/>
         </Route>
+        <Route path="teste" element={<PrivateRoute><Teste /></PrivateRoute>}/>
       </Routes>
     </BrowserRouter>
     // <div className="App">
